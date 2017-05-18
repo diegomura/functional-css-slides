@@ -8,9 +8,7 @@ html
     link(rel='stylesheet', type='text/css', href='build/build.css')
 
   body
-
     article
-
       section
         h1 Functional CSS
         div.social
@@ -20,6 +18,154 @@ html
           img(src="./images/github.png")
           h4 diegomura
       
+      section(data-bespoke-backdrop='cat')
+        h3 The real way to <b>scale</b> css, is to <b>stop</b> writing css
+
+      section
+        h2 Have you ever...?
+        ul
+          li Spent a lot of time looking for an existing class to reuse?
+          li Created reusable mixins/placeholders or classes and then forget about it?
+          li Had trouble to name classes?
+          li Had to review a bunch of stylesheets, checking if BEM is being used correctly?
+          li Had to split one class in two because you can no longer reuse it?
+      
+      section(data-bespoke-backdrop='emphatic')
+        h3 An overwhelming majority of css you would need for your site has already been written
+
+      section(data-bespoke-backdrop='look')
+        h2 How does it look like?
+        
+      section
+        h2 Code
+
+      section
+        h2 Tools
+        ul
+          li Basscss
+          li Tachyons
+
+      section(data-bespoke-backdrop='react-background')
+        h2 Setup with React
+      
+      section
+        h3 PostCSS
+        pre.code-snippet
+          code.language-javascript.
+            const postcssImport = require('postcss-import');
+            const postcssCssnext = require('postcss-cssnext');
+
+            module.exports = {
+              plugins: [
+                postcssImport,
+                postcssCssnext
+              ]
+            };
+        
+        span.file-name
+          <i>postcss.config.js</i>
+          
+      section
+        h3 Basscss
+        pre.code-snippet
+          code.language-css.
+            @import 'basscss';
+            
+            * {
+              margin: 0px;
+              padding: 0px;
+            }
+
+            html {
+              height: 100%;
+            }
+            
+            /* ... */
+        
+        span.file-name
+          <i>src/styles/index.css</i>
+
+      section
+        h3 Addons
+        
+        pre.code-snippet
+          code.language-css.
+            @import 'basscss';
+            @import 'basscss-btn';
+            
+            * {
+              margin: 0px;
+              padding: 0px;
+            }
+
+            html {
+              height: 100%;
+            }
+            
+            /* ... */
+        
+        span.file-name
+          <i>src/styles/index.css</i>
+      
+      section
+        h3 Customizations
+        
+        pre.code-snippet
+          code.language-css.
+            @import 'basscss';
+            @import 'basscss-btn';
+            @import './forms';
+            @import './colors';
+            @import './animations';
+            /* ... */
+
+            :root {
+              --button-font-weight: normal;
+              --button-background-color: #62b3d2;
+            }
+
+            * {
+              margin: 0px;
+              padding: 0px;
+            }
+
+            html {
+              height: 100%;
+            }
+            
+            /* ... */
+        
+        span.file-name
+          <i>src/styles/index.css</i>
+
+      section(data-bespoke-backdrop='balance')
+        h2 Pros & cons
+
+      section
+        h2 Pros
+        ul
+          li Rarely write new CSS
+          li %99.99® reusable styles
+          li Team understanding
+          li Small CSS bundle -> faster load time
+          li More control over bundled code
+          li No styles definitions inside JS
+          li No component.scss 
+
+      section
+        h2 Cons
+        ul
+          li Less semantic classnames
+          li Learn propietry class names
+          li Hacky when you need a custom style
+          li <i>Find and replace</i> problem
+
+      section
+        h2 Sources
+        ul
+          li https://github.com/chibicode/react-functional-css-protips
+          li http://basscss.com/
+
       section
         h3 Thanks!
 
