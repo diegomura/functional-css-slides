@@ -37,7 +37,17 @@
         <h2>How does it look like?</h2>
       </section>
       <section>
-        <h2>Code</h2>
+        <pre class="code-snippet"><code class="language-javascript">const Card = ({ title, content }) => (
+  &#60;div className='flex flex-column border rounded max-width-1'&#62;
+    &#60;img className='fit' src='' /&#62;
+    &#60;div className='p1'&#62;
+      &#60;h2 className='h2'&#62;{title}&#60;/h2&#62;
+      &#60;p className='ml1'&#62;{content}&#60;/p&#62;
+      &#60;button className='btn btn-primary right'&#62;Next&#60;/button&#62;
+    &#60;/div&#62;
+  &#60;/div&#62;
+);
+</code></pre>
       </section>
       <section>
         <h2>Tools</h2>
@@ -136,6 +146,7 @@ html {
           <li>Team understanding</li>
           <li>Small CSS bundle -> faster load time</li>
           <li>More control over bundled code</li>
+          <li>Forces style guide</li>
           <li>No styles definitions inside JS</li>
           <li>No component.scss </li>
         </ul>
@@ -145,6 +156,7 @@ html {
         <ul>
           <li>Less semantic class names</li>
           <li>Learn propietary class names</li>
+          <li>Fixed units for margins, paddings, etc.</li>
           <li>Hacky when you need a custom style</li>
           <li><i>Find and replace</i> problem</li>
         </ul>
