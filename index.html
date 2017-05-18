@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Functional CSS</title>
+    <link rel="stylesheet" type="text/css" href="build/build.css">
+  </head>
+  <body>
+    <article>
+      <section>
+        <h1>Functional CSS</h1>
+        <div class="social"><img src="./images/twitter.png">
+          <h4>@diegomura</h4>
+        </div>
+        <div class="social"><img src="./images/github.png">
+          <h4>diegomura</h4>
+        </div>
+      </section>
+      <section data-bespoke-backdrop="cat">
+        <h3>The real way to <b>scale</b> css, is to <b>stop</b> writing css</h3>
+      </section>
+      <section>
+        <h2>Have you ever...?</h2>
+        <ul>
+          <li>Spent a lot of time looking for an existing class to reuse?</li>
+          <li>Created reusable mixins/placeholders or classes and then forget about it?</li>
+          <li>Had trouble to name classes?</li>
+          <li>Had to review a bunch of stylesheets, checking if BEM is being used correctly?</li>
+          <li>Had to split one class in two because you can no longer reuse it?</li>
+        </ul>
+      </section>
+      <section data-bespoke-backdrop="emphatic">
+        <h3>An overwhelming majority of css you would need for your site has already been written</h3>
+      </section>
+      <section data-bespoke-backdrop="look">
+        <h2>How does it look like?</h2>
+      </section>
+      <section>
+        <h2>Code</h2>
+      </section>
+      <section>
+        <h2>Tools</h2>
+        <ul>
+          <li>Basscss</li>
+          <li>Tachyons</li>
+        </ul>
+      </section>
+      <section data-bespoke-backdrop="react-background">
+        <h2>Setup with React</h2>
+      </section>
+      <section>
+        <h3>PostCSS</h3>
+        <pre class="code-snippet"><code class="language-javascript">const postcssImport = require('postcss-import');
+const postcssCssnext = require('postcss-cssnext');
+
+module.exports = {
+  plugins: [
+    postcssImport,
+    postcssCssnext
+  ]
+};
+</code></pre><span class="file-name"><i>postcss.config.js</i></span>
+      </section>
+      <section>
+        <h3>Basscss</h3>
+        <pre class="code-snippet"><code class="language-css">@import 'basscss';
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+html {
+  height: 100%;
+}
+
+/* ... */
+</code></pre><span class="file-name"><i>src/styles/index.css</i></span>
+      </section>
+      <section>
+        <h3>Addons</h3>
+        <pre class="code-snippet"><code class="language-css">@import 'basscss';
+@import 'basscss-btn';
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+html {
+  height: 100%;
+}
+
+/* ... */
+</code></pre><span class="file-name"><i>src/styles/index.css</i></span>
+      </section>
+      <section>
+        <h3>Customizations</h3>
+        <pre class="code-snippet"><code class="language-css">@import 'basscss';
+@import 'basscss-btn';
+@import './forms';
+@import './colors';
+@import './animations';
+/* ... */
+
+:root {
+  --button-font-weight: normal;
+  --button-background-color: #62b3d2;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+html {
+  height: 100%;
+}
+
+/* ... */
+</code></pre><span class="file-name"><i>src/styles/index.css</i></span>
+      </section>
+      <section data-bespoke-backdrop="balance">
+        <h2>Pros & cons</h2>
+      </section>
+      <section>
+        <h2>Pros</h2>
+        <ul>
+          <li>Rarely write new CSS</li>
+          <li>%99.99® reusable styles</li>
+          <li>Team understanding</li>
+          <li>Small CSS bundle -> faster load time</li>
+          <li>More control over bundled code</li>
+          <li>No styles definitions inside JS</li>
+          <li>No component.scss </li>
+        </ul>
+      </section>
+      <section>
+        <h2>Cons</h2>
+        <ul>
+          <li>Less semantic classnames</li>
+          <li>Learn propietry class names</li>
+          <li>Hacky when you need a custom style</li>
+          <li><i>Find and replace</i> problem</li>
+        </ul>
+      </section>
+      <section>
+        <h2>Sources</h2>
+        <ul>
+          <li>https://github.com/chibicode/react-functional-css-protips</li>
+          <li>http://basscss.com/</li>
+        </ul>
+      </section>
+      <section>
+        <h3>Thanks!</h3>
+      </section>
+    </article>
+    <script src="build/build.js"></script>
+  </body>
+</html>
